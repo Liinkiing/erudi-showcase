@@ -47,3 +47,14 @@ p {
   padding: 0 1rem;
   max-width: $container-width;
 }
+
+.iframe {
+  margin: 0 auto;
+  width: 60%;
+  height: 36rem;
+  background-color: $main-color;
+
+  @include tablet {
+    width: 80%;
+  }
+}

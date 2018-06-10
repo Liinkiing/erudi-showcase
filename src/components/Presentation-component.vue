@@ -54,7 +54,7 @@
 
                 <div class="presentation-video">
                     <h2>Teaser</h2>
-                    <div class="presentation-video__iframe">
+                    <div class="iframe">
                         <!-- Todo: Add iframe -->
                     </div>
                 </div>
@@ -225,13 +225,6 @@ export default {
 
             h2 {
                 margin-bottom: 4rem;
-            }
-
-            &__iframe {
-                margin: 0 auto;
-                width: 60%;
-                height: 36rem;
-                background-color: $main-color;
             }
         }
 

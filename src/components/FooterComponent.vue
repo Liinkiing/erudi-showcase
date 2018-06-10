@@ -6,6 +6,7 @@
         <a :href="member.link" class="team-member" v-for="member in members">
           <img :src="member.img" alt="Avatar">
           <p>{{ member.first_name }}  {{ member.last_name }}</p>
+          <p>{{ member.role }}</p>
         </a>
       </div>
 
@@ -106,7 +107,8 @@ export default {
           transition: all .3s ease;
         }
 
-        p {
+        p:first-of-type {
+          margin-bottom: 1.2rem;
           @include fontSize(22);
           font-family: tragic-marker, sans-serif;
           text-transform: uppercase;
