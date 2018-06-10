@@ -82,7 +82,6 @@ export default {
     @import "./../assets/scss/mixins";
 
 	.presentation {
-        min-height: 100vh;
         background-color: $sky-color;
 
         &-logo {
@@ -90,7 +89,7 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 70vh;
+            height: 80vh;
             text-align: center;
             flex-direction: column;
             background-color: $bg-logo-color;
@@ -102,7 +101,7 @@ export default {
             .plane {
                 z-index: 2;
                 position: absolute;
-                top: 26rem;
+                top: 27rem;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 45%;
@@ -122,7 +121,7 @@ export default {
                 z-index: 1;
                 content: url("./../assets/img/presentation/presentation-shape.svg");
                 position: absolute;
-                top: 65vh;
+                top: 75vh;
                 left: 0;
                 width: 100%;
 
