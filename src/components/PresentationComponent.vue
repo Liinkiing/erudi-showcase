@@ -6,7 +6,7 @@
 
                 <img class="plane" src="./../assets/img/presentation/plane.png" alt="Plane">
 
-                <div class="presentation-text pitch">
+                <div class="text-group pitch">
                     <h2>Le pitch</h2>
                     <p>Erudi est un voyage interactif sensoriel qui permet aux enfants âgés entre 6 et 9 ans de s’ouvrir aux différentes cultures du monde </p>
                 </div>
@@ -15,12 +15,12 @@
 
         <div class="presentation-content">
             <div class="container">
-                <div class="presentation-text concept">
+                <div class="text-group concept">
                     <h2>Le concept</h2>
                     <p>Un tour du monde culturel immersif faisant appel aux 5 sens par le biais des contes populaires</p>
                 </div>
 
-                <div class="presentation-text kit">
+                <div class="text-group kit">
                     <h2>Le dispositif</h2>
                     <p>Un coffret physique et numérique, idéal pour une immersion totale</p>
                 </div>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="presentation-worldmap">
-            <div class="presentation-text worldmap">
+            <div class="text-group worldmap">
                 <h2>Une carte interactive</h2>
                 <p>Déplace toi sur la carte et choisi ta prochaine destination !</p>
             </div>
@@ -143,15 +143,7 @@ export default {
             }
         }
 
-        &-text {
-            margin: 0 auto;
-            max-width: 40rem;
-            text-align: center;
-
-            h2 {
-                margin-bottom: 2rem;
-            }
-
+        .text-group {
             &.pitch {
                 z-index: 2;
                 position: absolute;

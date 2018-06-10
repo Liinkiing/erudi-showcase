@@ -11,11 +11,6 @@
 </template>
 
 <script>
-import omarAvatar from './../assets/img/footer/team/omar.svg'
-import sophieAvatar from './../assets/img/footer/team/sophie.svg'
-import fanyAvatar from './../assets/img/footer/team/fany.svg'
-import erwannAvatar from './../assets/img/footer/team/erwann.svg'
-
 export default {
   name: 'demonstration-component'
 }
