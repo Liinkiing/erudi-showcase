@@ -1,3 +1,4 @@
+@import "colors";
 @import "fonts";
 @import "mixins";
 @import "variables";
@@ -10,6 +11,7 @@ html {
 
 body {
   margin: 0;
+  color: $main-color;
   font-family: museo-sans-rounded, sans-serif;
 }
 
@@ -21,10 +23,15 @@ a {
 h1, h2, h3 {
   font-weight: normal;
   text-transform: uppercase;
+  font-family: tragic-marker, sans-serif;
 }
 
 h1, h2, h3, p {
   margin: 0;
+}
+
+h2 {
+  @include fontSize(32);
 }
 
 h3 {
@@ -32,7 +39,7 @@ h3 {
 }
 
 p {
-  @include fontSize(16);
+  @include fontSize(18);
 }
 
 .container {

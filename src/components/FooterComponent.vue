@@ -32,34 +32,34 @@ export default {
   data () {
     return {
       members: [
-          {
-              link: 'https://github.com/Liinkiing',
-              img: omarAvatar,
-              first_name: 'Omar',
-              last_name: 'Jbara',
-              role: 'Développeur'
-          },
-          {
-              link: 'http://sophielaplace.com/',
-              img: sophieAvatar,
-              first_name: 'Sophie',
-              last_name: 'Laplace',
-              role: 'Designer'
-          },
-          {
-              link: '#',
-              img: fanyAvatar,
-              first_name: 'Fany',
-              last_name: 'Thourain',
-              role: 'Designer'
-          },
-          {
-              link: 'https://github.com/Eronne',
-              img: erwannAvatar,
-              first_name: 'Erwann',
-              last_name: 'Letue',
-              role: 'Développeur'
-          }
+        {
+          link: 'https://github.com/Liinkiing',
+          img: omarAvatar,
+          first_name: 'Omar',
+          last_name: 'Jbara',
+          role: 'Développeur'
+        },
+        {
+          link: 'http://sophielaplace.com/',
+          img: sophieAvatar,
+          first_name: 'Sophie',
+          last_name: 'Laplace',
+          role: 'Designer'
+        },
+        {
+          link: '#',
+          img: fanyAvatar,
+          first_name: 'Fany',
+          last_name: 'Thourain',
+          role: 'Designer'
+        },
+        {
+          link: 'https://github.com/Eronne',
+          img: erwannAvatar,
+          first_name: 'Erwann',
+          last_name: 'Letue',
+          role: 'Développeur'
+        }
       ]
     }
   }
@@ -75,10 +75,6 @@ export default {
     text-align: center;
     color: $main-color;
     background-color: $footer-color;
-
-    h3 {
-      font-family: tragic-marker, sans-serif;
-    }
 
     .team-wrapper {
       display: flex;
