@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <footer-component/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    FooterComponent
   }
 }
 </script>
 
-<style></style>
+<style lang="scss">
+  @import "assets/scss/app.scss";
+</style>

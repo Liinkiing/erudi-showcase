@@ -1,0 +1,18 @@
+@import "variables";
+
+@mixin fontSize($sizeValue: 1.6) {
+  font-size: ($sizeValue * 1) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $break_layout_tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $break_layout_mobile) {
+    @content;
+  }
+}
