@@ -93,6 +93,11 @@ export default {
 
         @include tablet {
           width: 100%;
+          margin-top: 6rem;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
         }
 
         img {

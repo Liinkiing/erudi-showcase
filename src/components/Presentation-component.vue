@@ -1,56 +1,62 @@
 <template>
     <div class="presentation">
-        <div class="container">
-            <div class="presentation-logo">
+        <div class="presentation-logo">
+            <div class="container">
                 <img src="./../assets/img/presentation/erudi-logo.png" alt="Logo">
+
+                <img class="plane" src="./../assets/img/presentation/plane.png" alt="Plane">
 
                 <div class="presentation-text pitch">
                     <h2>Le pitch</h2>
                     <p>Erudi est un voyage interactif sensoriel qui permet aux enfants âgés entre 6 et 9 ans de s’ouvrir aux différentes cultures du monde </p>
                 </div>
             </div>
+        </div>
 
-            <div class="presentation-text concept">
-                <h2>Le concept</h2>
-                <p>Un tour du monde culturel immersif faisant appel aux 5 sens par le biais des contes populaires</p>
-            </div>
-
-            <div class="presentation-text kit">
-                <h2>Le dispositif</h2>
-                <p>Un coffret physique et numérique, idéal pour une immersion totale</p>
-            </div>
-
-            <div class="presentation-kit">
-                <div class="presentation-kit__item">
-                    <img src="./../assets/img/presentation/kit/ipad.png" alt="Ipad">
-                    <p>Une application interactive</p>
+        <div class="presentation-content">
+            <div class="container">
+                <div class="presentation-text concept">
+                    <h2>Le concept</h2>
+                    <p>Un tour du monde culturel immersif faisant appel aux 5 sens par le biais des contes populaires</p>
                 </div>
 
-                <div class="presentation-kit__item">
-                    <img src="./../assets/img/presentation/kit/totem.png" alt="Totem">
-                    <p>Diffuseur d'odeurs</p>
+                <div class="presentation-text kit">
+                    <h2>Le dispositif</h2>
+                    <p>Un coffret physique et numérique, idéal pour une immersion totale</p>
                 </div>
 
-                <div class="presentation-kit__item">
-                    <img src="./../assets/img/presentation/kit/caps.png" alt="Capsules d'odeurs">
-                    <p>Des capsules d'odeurs</p>
+                <div class="presentation-kit">
+                    <div class="presentation-kit__item">
+                        <img src="./../assets/img/presentation/kit/ipad.png" alt="Ipad">
+                        <p>Une application interactive</p>
+                    </div>
+
+                    <div class="presentation-kit__item">
+                        <img src="./../assets/img/presentation/kit/totem.png" alt="Totem">
+                        <p>Diffuseur d'odeurs</p>
+                    </div>
+
+                    <div class="presentation-kit__item">
+                        <img src="./../assets/img/presentation/kit/caps.png" alt="Capsules d'odeurs">
+                        <p>Des capsules d'odeurs</p>
+                    </div>
+
+                    <div class="presentation-kit__item">
+                        <img src="./../assets/img/presentation/kit/book.png" alt="Carnet d'odeurs">
+                        <p>Un carnet d'odeurs</p>
+                    </div>
+
+                    <div class="presentation-kit__item">
+                        <img src="./../assets/img/presentation/kit/map.png" alt="Carte du monde">
+                        <p>Une carte du monde papier</p>
+                    </div>
                 </div>
 
-                <div class="presentation-kit__item">
-                    <img src="./../assets/img/presentation/kit/book.png" alt="Carnet d'odeurs">
-                    <p>Un carnet d'odeurs</p>
-                </div>
-
-                <div class="presentation-kit__item">
-                    <img src="./../assets/img/presentation/kit/map.png" alt="Carte du monde">
-                    <p>Une carte du monde papier</p>
-                </div>
-            </div>
-
-            <div class="presentation-video">
-                <h2>Teaser</h2>
-                <div class="presentation-video__iframe">
-                    <!-- Todo: Add iframe -->
+                <div class="presentation-video">
+                    <h2>Teaser</h2>
+                    <div class="presentation-video__iframe">
+                        <!-- Todo: Add iframe -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,33 +83,64 @@ export default {
 
 	.presentation {
         min-height: 100vh;
-
-        &::before {
-            z-index: -1;
-            content: url("./../assets/img/presentation/presentation_bg.svg");
-            position: absolute;
-            width: 100vw;
-        }
+        background-color: $sky-color;
 
         &-logo {
-            margin-bottom: 18rem;
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 70vh;
             text-align: center;
             flex-direction: column;
+            background-color: $bg-logo-color;
 
-            &::after {
-                content: url("./../assets/img/presentation/plane.png");
+            @include tablet {
+                height: 80vh;
+            }
+
+            .plane {
+                z-index: 2;
                 position: absolute;
-                top: 30rem;
+                top: 26rem;
                 left: 50%;
                 transform: translateX(-50%);
+                width: 45%;
+
+                @include tablet {
+                    top: 33rem;
+                    width: 70%;
+                }
+
+                @include mobile {
+                    top: 35rem;
+                    width: 90%;
+                }
+            }
+
+            &::after {
+                z-index: 1;
+                content: url("./../assets/img/presentation/presentation-shape.svg");
+                position: absolute;
+                top: 65vh;
+                left: 0;
+                width: 100%;
+
+                @include tablet {
+                    top: 80vh;
+                }
             }
 
             img {
                 width: 100%;
+            }
+        }
+
+        &-content {
+            padding-top: 38rem;
+
+            @include tablet {
+                padding-top: 24rem;
             }
         }
 
@@ -117,11 +154,20 @@ export default {
             }
 
             &.pitch {
-                margin-top: 6rem;
+                z-index: 2;
+                position: absolute;
+                bottom: -8rem;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 4rem;
+
+                @include tablet {
+                    bottom: 5%;
+                }
             }
 
             &.concept{
-                margin-bottom: 8rem;
+                margin-bottom: 10rem;
             }
 
             &.kit {
@@ -133,10 +179,18 @@ export default {
                 bottom: 10rem;
                 right: 10rem;
                 text-align: left;
+
+                @include tablet {
+                    margin-top: 15rem;
+                    margin-bottom: 6rem;
+                    position: static;
+                    text-align: center;
+                }
             }
         }
 
         &-kit {
+            margin-bottom: 15rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -153,6 +207,12 @@ export default {
 
                 @include tablet {
                     width: 100%;
+                    height: 14rem;
+                    margin-top: 6rem;
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
                 }
 
                 p {
@@ -170,7 +230,7 @@ export default {
 
             &__iframe {
                 margin: 0 auto;
-                width: 64rem;
+                width: 60%;
                 height: 36rem;
                 background-color: $main-color;
             }
@@ -178,9 +238,11 @@ export default {
 
         &-worldmap {
             position: relative;
+            margin-top: 4rem;
 
             img {
-                width: 100%;
+                margin-left: -2.5%;
+                width: 105%;
             }
         }
     }
