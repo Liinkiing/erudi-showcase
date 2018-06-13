@@ -55,7 +55,7 @@
                 <div class="presentation-video">
                     <h2>Teaser</h2>
                     <div class="iframe">
-                        <!-- Todo: Add iframe -->
+                        <iframe src="https://player.vimeo.com/video/274977095" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,6 @@ export default {
 
 	.presentation {
         background-color: $sky-color;
-
         &-logo {
             position: relative;
             display: flex;
