@@ -63,8 +63,16 @@ export default {
       &.inversed {
         flex-direction: row-reverse;
       }
+
       img {
         width: 729px;
+      }
+    }
+    .row, .row.inversed {
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
       }
     }
     .text-group {
